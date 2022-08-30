@@ -42,34 +42,27 @@ private:
             getline(fin, temp);
             if (temp.starts_with("-"))
                 continue;
-            else if (temp.starts_with("Name"))
-            {
+            else if (temp.starts_with("Name")){
                 this->name = temp.substr(6);
             }
-            else if (temp.starts_with("Age"))
-            {
+            else if (temp.starts_with("Age")){
                 this->age = stoi(temp.substr(4));
             }
-            else if (temp.starts_with("Username"))
-            {
+            else if (temp.starts_with("Username")){
                 this->username = temp.substr(10);
             }
-            else if (temp.starts_with("Password"))
-            {
+            else if (temp.starts_with("Password")){
                 this->password = temp.substr(10);
             }
-            else if (temp.starts_with("Gender"))
-            {
+            else if (temp.starts_with("Gender")){
                 this->gender = (temp.substr(8))[0];
             }
 
-            if ((this->username == username) && (this->password == password) && (fieldNo == 5))
-            {
+            if ((this->username == username) && (this->password == password) && (fieldNo == 5)){
                 isLoginSuccessful = true;
                 break;
             }
-            else if (fieldNo == 5)
-            {
+            else if (fieldNo == 5){
                 fieldNo = -1;
             }
         }
@@ -113,7 +106,6 @@ private:
 
         logout();
     }
-
 public:
     User(){
         name = "";
